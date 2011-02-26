@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Zone:</b>
+  <%= @ward.zone_id %>
+</p>
+
+<p>
+  <b>Admin:</b>
+  <%= @ward.admin_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @ward.name %>
+</p>
+
+<p>
+  <b>Number:</b>
+  <%= @ward.number %>
+</p>
+
+<p>
+  <b>Votes:</b>
+  <%= @ward.votes %>
+</p>
+
+
+<%= link_to 'Edit', edit_ward_path(@ward) %> |
+<%= link_to 'Back', wards_path %>

@@ -1,0 +1,31 @@
+<h1>Listing wards</h1>
+
+<table>
+  <tr>
+    <th>Zone</th>
+    <th>Admin</th>
+    <th>Name</th>
+    <th>Number</th>
+    <th>Votes</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @wards.each do |ward| %>
+  <tr>
+    <td><%= ward.zone_id %></td>
+    <td><%= ward.admin_id %></td>
+    <td><%= ward.name %></td>
+    <td><%= ward.number %></td>
+    <td><%= ward.votes %></td>
+    <td><%= link_to 'Show', ward %></td>
+    <td><%= link_to 'Edit', edit_ward_path(ward) %></td>
+    <td><%= link_to 'Destroy', ward, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ward', new_ward_path %>
